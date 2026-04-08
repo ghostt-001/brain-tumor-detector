@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg,#081c2c,#0b2a44);
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255,255,255,0.05);
+    padding: 15px 40px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* PROFILE */
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 35px;
+    border-radius: 50%;
+}
+
+/* DROPDOWN */
+.menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: #0b2a44;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    z-index: 1000;
+}
+
+/* LAYOUT */
+.main-container {
+    display: flex;
+    padding: 40px;
+}
+
+.left-panel { width: 50%; }
+.right-panel {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* UPLOAD */
+.upload-box {
+    border: 2px dashed #00b4d8;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.primary {
+    background: #00b4d8;
+    color: white;
+}
+
+.glow {
+    border: 2px solid #00b4d8;
+    background: transparent;
+    color: #00b4d8;
+}
+
+/* PREVIEW */
+.preview-card {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.preview-card img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* RESULT */
+.result-card {
+    width: 350px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+}
+
+/* PROGRESS */
+.progress-bar {
+    height: 10px;
+    background: rgba(255,255,255,0.2);
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background: #00b4d8;
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-box {
+    background: #0b2a44;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* LOADER */
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.2);
+    border-top: 5px solid #00b4d8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}

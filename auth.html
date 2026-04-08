@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<!-- NAVBAR (same as index) -->
+<header id="navbar">
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="/" class="logo">🧠 Brain Tumor Detection</a>
+        </div>
+        <div class="nav-right">
+            <a href="/" class="home-link">Home</a>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+    <div class="form-box">
+
+        <!-- LOGIN -->
+        <div id="login-form" class="form active">
+            <h2>Login</h2>
+            <input id="login-email" type="email" placeholder="Email">
+            <input id="login-password" type="password" placeholder="Password">
+            <button onclick="handleLogin()">Login</button>
+
+            <p>Don't have an account? 
+                <span onclick="showRegister()">Register</span>
+            </p>
+        </div>
+
+        <!-- REGISTER -->
+        <div id="register-form" class="form">
+            <h2>Register</h2>
+            <input id="name" type="text" placeholder="Full Name">
+            <input id="email" type="email" placeholder="Email">
+            <input id="password" type="password" placeholder="Password">
+            <button onclick="register()">Register</button>
+
+            <p>Already have an account? 
+                <span onclick="showLogin()">Login</span>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

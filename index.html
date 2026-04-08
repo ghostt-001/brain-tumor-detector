@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brain Tumor Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="navbar">
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="#" class="logo">🧠 Brain Tumor Detection</a>
+        </div>
+        <div class="nav-right">
+            <a href="auth.html">Login</a>
+            <a href="auth.html">Signup</a>
+        </div>
+    </div>
+</header>
+
+<section class="info-section">
+    <div class="content-wrapper">
+
+        <div class="intro">
+            <h2>About Brain Tumor</h2>
+            <p>
+                A brain tumor is an abnormal growth of cells within the brain.
+                It may be benign or malignant and requires medical diagnosis.
+            </p>
+        </div>
+
+        <div class="stages">
+            <h2>Tumor Stages</h2>
+            <div class="card-container">
+
+                <div class="stage-card"><h3>Stage 1</h3></div>
+                <div class="stage-card"><h3>Stage 2</h3></div>
+                <div class="stage-card"><h3>Stage 3</h3></div>
+                <div class="stage-card"><h3>Stage 4</h3></div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="overlay">
+        <h1>AI Brain Tumor Detection</h1>
+        <p>Upload MRI scan for prediction</p>
+        <button class="upload-btn" onclick="handleUpload()">Upload MRI</button>
+    </div>
+</section>
+
+<!-- LOGIN REQUIRED POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-box">
+        <h2>Login Required</h2>
+        <p>Please login or register to continue.</p>
+
+        <div class="popup-buttons">
+            <a href="auth.html" class="btn">Login</a>
+            <a href="auth.html" class="btn">Register</a>
+        </div>
+
+        <span class="close" onclick="closePopup()">×</span>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Upload MRI</title>
+<link rel="stylesheet" href="upload.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <h2 class="logo">🧠 Brain Tumor Detection</h2>
+
+        <div class="nav-right">
+            <span id="welcomeText">Welcome, User</span>
+
+            <div class="profile" id="profile">
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" id="profilePic">
+
+                <div id="menu" class="menu">
+                    <h4>History</h4>
+                    <ul id="historyList"></ul>
+                    <button class="btn glow" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="main-container">
+
+    <div class="left-panel">
+
+        <h1>Upload MRI Scan</h1>
+
+        <div class="upload-box" id="uploadBox">
+            <input type="file" id="fileInput" accept="image/*" hidden>
+
+            <div onclick="fileInput.click()">
+                <p>Drag & Drop or Click to Upload</p>
+            </div>
+
+            <p>OR</p>
+
+            <input type="text" id="imageUrl" placeholder="Paste Image URL">
+            <button class="btn glow" onclick="loadFromURL()">Load</button>
+        </div>
+
+        <div id="previewCard" class="preview-card hidden">
+            <img id="previewImg">
+            <p>MRI Scan</p>
+            <button class="btn primary" onclick="analyze()">Analyze</button>
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+        <div id="resultCard" class="result-card hidden">
+            <h2 id="resultTitle"></h2>
+            <p id="confidence"></p>
+            <p id="details"></p>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+            <button class="btn glow" onclick="downloadReport()">Download Report</button>
+        </div>
+    </div>
+
+</section>
+
+<!-- ANALYZING POPUP -->
+<div id="loadingPopup" class="popup">
+    <div class="popup-box">
+        <div class="loader"></div>
+        <h3>Analyzing Image...</h3>
+    </div>
+</div>
+
+<script src="upload.js"></script>
+</body>
+</html>
